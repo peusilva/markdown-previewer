@@ -7,6 +7,8 @@ import Previewer from './Components/Previewer/Previewer.jsx';
 
 function App() {
   const [layout, setLayout] = useState("both")
+  const [input, setInput] = useState('')
+
 
 const changeLayout = () => {
 switch (layout) {
@@ -27,9 +29,9 @@ switch (layout) {
   return (
     <>
      <h1>Markdown Previewer</h1>
-     {(layout === "both"|| layout === "editor") && <Editor />}
+     {(layout === "both"|| layout === "editor") && <Editor input={input} setInput={setInput}/>}
      <button onClick={() => changeLayout()}>Change layout</button>
-     {(layout === "both"|| layout === "previewer") && <Previewer />}
+     {(layout === "both"|| layout === "previewer") && <Previewer input={input} />}
     </>
   )
 }

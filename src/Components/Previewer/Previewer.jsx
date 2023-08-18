@@ -1,12 +1,17 @@
 import './Previewer.css';
+import PropTypes from 'prop-types';
 
-const Previewer = () => {
+const Previewer = ({ input }) => {
   return (
     <div>
     Previewer<br />
-    <textarea id="previewer" value=""></textarea>   
+    <textarea readOnly id="previewer" value={input}></textarea>   
 </div>
   )
+}
+
+Previewer.propTypes = {
+    input: PropTypes.string
 }
 
 export default Previewer
