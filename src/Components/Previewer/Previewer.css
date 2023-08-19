@@ -1,5 +1,24 @@
-#previewer {
-    height: 600px;
-    width: 350px;
-    overflow: scroll;
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 0;
+}
+
+#preview {
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    height: 800px;
+    width: 800px;
+    border: solid 2px white;
+    text-align: left;
+    background-color: #444;
+    padding-left: 15px;
+    line-height: 1.5;
+    box-shadow: 1px 1px 10px 2px white;
+}
+
+#previewer img {
+    max-width: 750px;
 }

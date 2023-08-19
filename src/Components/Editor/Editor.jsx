@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Editor = ({input,setInput}) => {
   return (
     <div>
-        Editor<br />
+        <h2>Editor</h2><br />
         <textarea value={input} onChange={(e)=> (setInput(e.target.value))} id="editor"></textarea>   
     </div>
   )
